@@ -214,6 +214,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">索引</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py-modindex.html">モジュール索引</a></li>
 </ul>
 
         </div>
@@ -248,8 +250,8 @@
 <dt class="sig sig-object py" id="powsid.SID">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">powsid.</span></span><span class="sig-name descname"><span class="pre">SID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powsid.SID" title="Link to this definition"></a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Windowsのセキュリティ識別子。</p>
-<p class="rubric">サンプル</p>
+<p>Windowsのセキュリティ識別子。
+.. rubric:: サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sid1</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">create_wellknownsid</span><span class="p">(</span><span class="n">WellKnownSIDType</span><span class="o">.</span><span class="n">NT_AUTHORITY</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sid2</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">lookup_user</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sid3</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">lookup_computer</span><span class="p">()</span>
@@ -308,16 +310,14 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.create_wellknownsid">
 <em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_wellknownsid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wellknownsidtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#powsid.WellKnownSIDType" title="powsid.WellKnownSIDType"><span class="pre">WellKnownSIDType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_sid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.create_wellknownsid" title="Link to this definition"></a></dt>
-<dd><p>既知のSIDを作成します。</p>
+<dd><p>既知のSIDを作成します。
+:param wellknownsidtype: 既知SID種類。
+:type wellknownsidtype: int | WellKnownSIDType
+:param domain_sid: ドメインを識別するSID。Noneの場合はローカルコンピューターです。
+:type domain_sid: SID | None, optional</p>
 <dl class="field-list simple">
-<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wellknownsidtype</strong> (<em>int</em><em> | </em><a class="reference internal" href="#powsid.WellKnownSIDType" title="powsid.WellKnownSIDType"><em>WellKnownSIDType</em></a>) -- 既知SID種類。</p></li>
-<li><p><strong>domain_sid</strong> (<a class="reference internal" href="#powsid.SID" title="powsid.SID"><em>SID</em></a><em> | </em><em>None</em><em>, </em><em>optional</em>) -- ドメインを識別するSID。<a href="#id1"><span class="problematic" id="id2">`</span></a>None`の場合はローカルコンピューターです。</p></li>
-</ul>
-</dd>
-<dt class="field-even">例外<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>WinError</strong> -- SIDの取得に失敗。</p>
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- SIDの取得に失敗。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -325,12 +325,8 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="powsid.SID.domainsid">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">domainsid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></em><a class="headerlink" href="#powsid.SID.domainsid" title="Link to this definition"></a></dt>
-<dd><p>ドメインSIDを取得します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 取得失敗。</p>
-</dd>
-</dl>
+<dd><p>ドメインSIDを取得します。
+:raises WinError: 取得失敗。</p>
 </dd></dl>
 
 <dl class="py method">
@@ -354,12 +350,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.get_subsidauth_at">
 <span class="sig-name descname"><span class="pre">get_subsidauth_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#powsid.SID.get_subsidauth_at" title="Link to this definition"></a></dt>
-<dd><p>指定位置のサブ認証値を取得します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 取得失敗。</p>
-</dd>
-</dl>
+<dd><p>指定位置のサブ認証値を取得します。
+:raises WinError: 取得失敗。</p>
 </dd></dl>
 
 <dl class="py method">
@@ -377,12 +369,8 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="powsid.SID.identifyauth">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identifyauth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#powsid.SID.identifyauth" title="Link to this definition"></a></dt>
-<dd><p>主要認証値を取得・設定します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 取得・設定失敗。</p>
-</dd>
-</dl>
+<dd><p>主要認証値を取得・設定します。
+:raises WinError: 取得・設定失敗。</p>
 </dd></dl>
 
 <dl class="py property">
@@ -400,16 +388,14 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.lookup_accountname">
 <em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lookup_accountname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">accountname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sysname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_accountname" title="Link to this definition"></a></dt>
-<dd><p>アカウント名からSIDを検索します。</p>
+<dd><p>アカウント名からSIDを検索します。
+:param accountname: アカウント名。ドメイン名も指定する場合は「domain_nameuser_name」形式を用います。
+:type accountname: str | None, optional
+:param sysname: リモートコンピューターの名前。Noneの場合はローカルコンピューターです。
+:type sysname: str | None, optional</p>
 <dl class="field-list simple">
-<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>accountname</strong> (<em>str</em><em> | </em><em>None</em><em>, </em><em>optional</em>) -- アカウント名。ドメイン名も指定する場合は「domain_nameuser_name」形式を用います。</p></li>
-<li><p><strong>sysname</strong> (<em>str</em><em> | </em><em>None</em><em>, </em><em>optional</em>) -- リモートコンピューターの名前。<a href="#id3"><span class="problematic" id="id4">`</span></a>None`の場合はローカルコンピューターです。</p></li>
-</ul>
-</dd>
-<dt class="field-even">例外<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>WinError</strong> -- 検索の失敗。</p>
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 検索の失敗。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -417,70 +403,44 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.lookup_accountsid">
 <span class="sig-name descname"><span class="pre">lookup_accountsid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sysname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID.AccountInfo" title="powsid.SID.AccountInfo"><span class="pre">AccountInfo</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_accountsid" title="Link to this definition"></a></dt>
-<dd><p>アカウント情報を取得します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 取得失敗。</p>
-</dd>
-</dl>
+<dd><p>アカウント情報を取得します。
+:raises WinError: 取得失敗。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.lookup_currentuser">
 <em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lookup_currentuser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_currentuser" title="Link to this definition"></a></dt>
-<dd><p>スレッドの現在のユーザーのSIDを検索します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 検索の失敗</p>
-</dd>
-</dl>
+<dd><p>スレッドの現在のユーザーのSIDを検索します。
+:raises WinError: 検索の失敗</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.lookup_localcomputer">
 <em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lookup_localcomputer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_localcomputer" title="Link to this definition"></a></dt>
-<dd><p>ローカルコンピューターのSIDを検索します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 検索の失敗</p>
-</dd>
-</dl>
+<dd><p>ローカルコンピューターのSIDを検索します。
+:raises WinError: 検索の失敗</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="powsid.SID.set_subsidauth_at">
 <span class="sig-name descname"><span class="pre">set_subsidauth_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#powsid.SID.set_subsidauth_at" title="Link to this definition"></a></dt>
-<dd><p>指定位置のサブ認証値を設定します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- 設定失敗。</p>
-</dd>
-</dl>
+<dd><p>指定位置のサブ認証値を設定します。
+:raises WinError: 設定失敗。</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="powsid.SID.subauthcount">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subauthcount</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#powsid.SID.subauthcount" title="Link to this definition"></a></dt>
-<dd><p>サブ認証値数を取得・設定します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>WinError</strong> -- サブ認証値数の取得失敗。</p>
-</dd>
-</dl>
+<dd><p>サブ認証値数を取得・設定します。
+:raises WinError: サブ認証値数の取得失敗。</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="powsid.SID.subauths">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subauths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#powsid.SID.subauths" title="Link to this definition"></a></dt>
-<dd><p>サブ認証値を取得・設定します。</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>WinError</strong> -- 取得失敗。</p></li>
-<li><p><strong>ValueError</strong> -- 設定時のサブ認証値の個数不一致。</p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>サブ認証値を取得・設定します。
+:raises WinError: 取得失敗。
+:raises ValueError: 設定時のサブ認証値の個数不一致。</p>
 </dd></dl>
 
 </dd></dl>
@@ -1177,7 +1137,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, potisan.</p>
+    <p>&#169; Copyright 2025, poti-san.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

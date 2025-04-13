@@ -1,5 +1,14 @@
 # powsidパッケージ
 
+```{toctree}
+---
+hidden:
+---
+apiref/powsid
+genindex
+modindex
+```
+
 PythonからWindowsのSID（セキュリティID）を使いやすくするパッケージです。標準ライブラリのみに依存します。
 
 **既知SIDの名前・ドメイン名・用途を取得する。**
@@ -33,9 +42,3 @@ print((sid3, *sid3.lookup_accountsid()))
 
 ローカルパッケージとしての利用を前提としています。使用時はダウンロードして`pip install e.ps1`を実行してください。
 
-```{toctree}
----
-maxdepth: 3
----
-apiref/powsid
-```
