@@ -194,7 +194,9 @@ class SID:
     __data: Array[c_byte]  # SIDのバイナリ表現
 
     def __init__(self, data: Array[c_byte]) -> None:
-        """SIDのバイナリ表現を与えて初期化します。"""
+        """SIDのバイナリ表現を与えて初期化します。
+
+        クラスは与えられた値をそのまま保持します。値を外部で変更する場合は複製を与えてください。"""
         self.__data = data
 
     def __len__(self) -> int:
@@ -213,9 +215,11 @@ class SID:
     @staticmethod
     def create_wellknownsid(wellknownsidtype: int | WellKnownSIDType, domain_sid: "SID | None" = None) -> "SID":
         """既知のSIDを作成します。
+
         Args:
             wellknownsidtype (int | WellKnownSIDType): 既知SID種類。
             domain_sid (SID | None, optional): ドメインを識別するSID。Noneの場合はローカルコンピューターです。
+
         Raises:
             WinError: SIDの取得に失敗。
         """
@@ -249,6 +253,7 @@ class SID:
     @staticmethod
     def from_strsid(s: str) -> "SID":
         """文字列SIDからSIDを作成します。
+
         Raises:
             WinError: 変換の失敗。
         """
@@ -273,6 +278,7 @@ class SID:
 
     def lookup_accountsid(self, sysname: str | None = None) -> "SID.AccountInfo":
         """アカウント情報を取得します。
+
         Raises:
             WinError: 取得失敗。
         """
@@ -297,6 +303,7 @@ class SID:
     @property
     def domainsid(self) -> "SID":
         """ドメインSIDを取得します。
+
         Raises:
             WinError: 取得失敗。"""
         size = c_uint32()
@@ -322,6 +329,7 @@ class SID:
     @property
     def subauthcount(self) -> int:
         """サブ認証値数を取得・設定します。
+
         Raises:
             WinError: サブ認証値数の取得失敗。"""
         ret: _Pointer[c_byte] = _GetSidSubAuthorityCount(self.__data)
@@ -338,6 +346,7 @@ class SID:
 
     def get_subsidauth_at(self, index: int) -> int:
         """指定位置のサブ認証値を取得します。
+
         Raises:
             WinError: 取得失敗。"""
         p: _Pointer[c_uint32] = _GetSidSubAuthority(self.__data, index)
@@ -347,6 +356,7 @@ class SID:
 
     def set_subsidauth_at(self, index: int, value: int) -> None:
         """指定位置のサブ認証値を設定します。
+
         Raises:
             WinError: 設定失敗。"""
         p: _Pointer[c_uint32] = _GetSidSubAuthority(self.__data, index)
@@ -357,6 +367,7 @@ class SID:
     @property
     def subauths(self) -> list[int]:
         """サブ認証値を取得・設定します。
+
         Raises:
             WinError: 取得失敗。
             ValueError: 設定時のサブ認証値の個数不一致。"""
@@ -378,6 +389,7 @@ class SID:
     @property
     def identifyauth(self) -> int:
         """主要認証値を取得・設定します。
+
         Raises:
             WinError: 取得・設定失敗。
         """
@@ -415,9 +427,11 @@ class SID:
     @staticmethod
     def lookup_accountname(accountname: str | None = None, sysname: str | None = None) -> "SID":
         """アカウント名からSIDを検索します。
+
         Args:
             accountname (str | None, optional): アカウント名。ドメイン名も指定する場合は「domain_name\\user_name」形式を用います。
             sysname (str | None, optional): リモートコンピューターの名前。Noneの場合はローカルコンピューターです。
+
         Raises:
             WinError: 検索の失敗。
         """
@@ -439,6 +453,7 @@ class SID:
     @staticmethod
     def lookup_currentuser() -> "SID":
         """スレッドの現在のユーザーのSIDを検索します。
+
         Raises:
             WinError: 検索の失敗
         """
@@ -447,6 +462,7 @@ class SID:
     @staticmethod
     def lookup_localcomputer() -> "SID":
         """ローカルコンピューターのSIDを検索します。
+
         Raises:
             WinError: 検索の失敗
         """
