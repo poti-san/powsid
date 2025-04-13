@@ -1,0 +1,1200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>powsid package &mdash; powsid  ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c033477b"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=4755f45a"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="prev" title="powsidパッケージ" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            powsid
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">powsid package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-powsid">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#powsid.SID"><code class="docutils literal notranslate"><span class="pre">SID</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.AccountInfo"><code class="docutils literal notranslate"><span class="pre">SID.AccountInfo</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.CURRENT_REVISION"><code class="docutils literal notranslate"><span class="pre">SID.CURRENT_REVISION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.MAX_SUB_AUTHORITIES"><code class="docutils literal notranslate"><span class="pre">SID.MAX_SUB_AUTHORITIES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.RECOMMENDED_SUB_AUTHORITIES"><code class="docutils literal notranslate"><span class="pre">SID.RECOMMENDED_SUB_AUTHORITIES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.bytes"><code class="docutils literal notranslate"><span class="pre">SID.bytes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.create_wellknownsid"><code class="docutils literal notranslate"><span class="pre">SID.create_wellknownsid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.domainsid"><code class="docutils literal notranslate"><span class="pre">SID.domainsid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.from_auths"><code class="docutils literal notranslate"><span class="pre">SID.from_auths()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.from_strsid"><code class="docutils literal notranslate"><span class="pre">SID.from_strsid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.get_required_len"><code class="docutils literal notranslate"><span class="pre">SID.get_required_len()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.get_subsidauth_at"><code class="docutils literal notranslate"><span class="pre">SID.get_subsidauth_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.has_equal_domain"><code class="docutils literal notranslate"><span class="pre">SID.has_equal_domain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.has_equal_prefix"><code class="docutils literal notranslate"><span class="pre">SID.has_equal_prefix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.identifyauth"><code class="docutils literal notranslate"><span class="pre">SID.identifyauth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.is_valid"><code class="docutils literal notranslate"><span class="pre">SID.is_valid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.is_wellknownsid"><code class="docutils literal notranslate"><span class="pre">SID.is_wellknownsid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.lookup_accountname"><code class="docutils literal notranslate"><span class="pre">SID.lookup_accountname()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.lookup_accountsid"><code class="docutils literal notranslate"><span class="pre">SID.lookup_accountsid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.lookup_currentuser"><code class="docutils literal notranslate"><span class="pre">SID.lookup_currentuser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.lookup_localcomputer"><code class="docutils literal notranslate"><span class="pre">SID.lookup_localcomputer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.set_subsidauth_at"><code class="docutils literal notranslate"><span class="pre">SID.set_subsidauth_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.subauthcount"><code class="docutils literal notranslate"><span class="pre">SID.subauthcount</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SID.subauths"><code class="docutils literal notranslate"><span class="pre">SID.subauths</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#powsid.SIDNameUse"><code class="docutils literal notranslate"><span class="pre">SIDNameUse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.ALIAS"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.ALIAS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.COMPUTER"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.COMPUTER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.DELETED_ACCOUNT"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.DELETED_ACCOUNT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.DOMAIN"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.DOMAIN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.GROUP"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.INVALID"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.INVALID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.LABEL"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.LOGON_SESSION"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.LOGON_SESSION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.USER"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.USER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.SIDNameUse.WELL_KNOWN_GROUP"><code class="docutils literal notranslate"><span class="pre">SIDNameUse.WELL_KNOWN_GROUP</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#powsid.WellKnownSIDType"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_ADMINISTRATOR"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_ADMINISTRATOR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_CERT_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_CERT_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_CLONEABLE_CONTROLLERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_CLONEABLE_CONTROLLERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_COMPUTERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_COMPUTERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_CONTROLLERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_CONTROLLERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_DEFAULT_SYSTEM_MANAGED"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_DEFAULT_SYSTEM_MANAGED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_DOMAIN_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_DOMAIN_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_DOMAIN_GUESTS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_DOMAIN_GUESTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_DOMAIN_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_DOMAIN_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_ENTERPRISE_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_ENTERPRISE_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_ENTERPRISE_KEY_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_ENTERPRISE_KEY_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_GUEST"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_GUEST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_KEY_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_KEY_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_KRBTGT"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_KRBTGT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_POLICY_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_POLICY_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_PROTECTED_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_PROTECTED_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_RAS_AND_IAS_SERVERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_RAS_AND_IAS_SERVERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_READONLY_CONTROLLERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_READONLY_CONTROLLERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ACCOUNT_SCHEMA_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ACCOUNT_SCHEMA_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ANONYMOUS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ANONYMOUS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.APPLICATION_PACKAGE_AUTHORITY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.APPLICATION_PACKAGE_AUTHORITY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATED_USER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATED_USER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATION_AUTHORITY_ASSERTED"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATION_AUTHORITY_ASSERTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATION_FRESH_KEY_AUTH"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATION_FRESH_KEY_AUTH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_ATTESTATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_ATTESTATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_MFA"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_MFA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATION_KEY_TRUST"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATION_KEY_TRUST</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.AUTHENTICATION_SERVICE_ASSERTED"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.AUTHENTICATION_SERVICE_ASSERTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BATCH"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BATCH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_ACCESS_CONTROL_ASSISTANCE_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_ACCESS_CONTROL_ASSISTANCE_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_ACCOUNT_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_ACCOUNT_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_ADMINISTRATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_ADMINISTRATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_ANY_PACKAGE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_ANY_PACKAGE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_AUTHORIZATION_ACCESS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_AUTHORIZATION_ACCESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_BACKUP_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_BACKUP_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_CERT_SVC_D_COM_ACCESS_GROUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_CERT_SVC_D_COM_ACCESS_GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_CRYPTO_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_CRYPTO_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_DCOM_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_DCOM_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_DEFAULT_SYSTEM_MANAGED_GROUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_DEFAULT_SYSTEM_MANAGED_GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_DEVICE_OWNERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_DEVICE_OWNERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_DOMAIN"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_DOMAIN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_EVENT_LOG_READERS_GROUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_EVENT_LOG_READERS_GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_GUESTS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_GUESTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_HYPER_V_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_HYPER_V_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_INCOMING_FOREST_TRUST_BUILDERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_INCOMING_FOREST_TRUST_BUILDERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_I_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_I_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_NETWORK_CONFIGURATION_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_NETWORK_CONFIGURATION_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_OPEN_SSH_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_OPEN_SSH_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_PERF_LOGGING_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_PERF_LOGGING_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_PERF_MONITORING_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_PERF_MONITORING_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_POWER_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_POWER_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_PRE_WINDOWS2000_COMPATIBLE_ACCESS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_PRE_WINDOWS2000_COMPATIBLE_ACCESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_PRINT_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_PRINT_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_RDS_ENDPOINT_SERVERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_RDS_ENDPOINT_SERVERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_RDS_MANAGEMENT_SERVERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_RDS_MANAGEMENT_SERVERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_RDS_REMOTE_ACCESS_SERVERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_RDS_REMOTE_ACCESS_SERVERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_REMOTE_DESKTOP_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_REMOTE_DESKTOP_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_REMOTE_MANAGEMENT_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_REMOTE_MANAGEMENT_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_REPLICATOR"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_REPLICATOR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_STORAGE_REPLICA_ADMINS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_STORAGE_REPLICA_ADMINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_SYSTEM_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_SYSTEM_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_TERMINAL_SERVER_LICENSE_SERVERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_TERMINAL_SERVER_LICENSE_SERVERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_USERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_USERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.BUILTIN_USER_MODE_HARDWARE_OPERATORS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.BUILTIN_USER_MODE_HARDWARE_OPERATORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CACHEABLE_PRINCIPALS_GROUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CACHEABLE_PRINCIPALS_GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_APPOINTMENTS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_APPOINTMENTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_CONTACTS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_CONTACTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_DOCUMENTS_LIBRARY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_DOCUMENTS_LIBRARY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_ENTERPRISE_AUTHENTICATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_ENTERPRISE_AUTHENTICATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_INTERNET_CLIENT"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_INTERNET_CLIENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_INTERNET_CLIENT_SERVER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_INTERNET_CLIENT_SERVER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_MUSIC_LIBRARY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_MUSIC_LIBRARY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_PICTURES_LIBRARY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_PICTURES_LIBRARY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_PRIVATE_NETWORK_CLIENT_SERVER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_PRIVATE_NETWORK_CLIENT_SERVER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_REMOVABLE_STORAGE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_REMOVABLE_STORAGE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_SHARED_USER_CERTIFICATES"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_SHARED_USER_CERTIFICATES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CAPABILITY_VIDEOS_LIBRARY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CAPABILITY_VIDEOS_LIBRARY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CONSOLE_LOGON"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CONSOLE_LOGON</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CREATOR_GROUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CREATOR_GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CREATOR_GROUP_SERVER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CREATOR_GROUP_SERVER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CREATOR_OWNER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CREATOR_OWNER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CREATOR_OWNER_RIGHTS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CREATOR_OWNER_RIGHTS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.CREATOR_OWNER_SERVER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.CREATOR_OWNER_SERVER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.DIALUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.DIALUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.DIGEST_AUTHENTICATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.DIGEST_AUTHENTICATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ENTERPRISE_CONTROLLERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ENTERPRISE_CONTROLLERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.ENTERPRISE_READONLY_CONTROLLERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.ENTERPRISE_READONLY_CONTROLLERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.HIGH_LABEL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.HIGH_LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.INTERACTIVE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.INTERACTIVE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.I_USER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.I_USER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOCAL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOCAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOCAL_ACCOUNT"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOCAL_ACCOUNT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOCAL_ACCOUNT_AND_ADMINISTRATOR"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOCAL_ACCOUNT_AND_ADMINISTRATOR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOCAL_LOGON"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOCAL_LOGON</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOCAL_SERVICE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOCAL_SERVICE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOCAL_SYSTEM"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOCAL_SYSTEM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOGON_IDS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOGON_IDS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.LOW_LABEL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.LOW_LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.MEDIUM_LABEL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.MEDIUM_LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.MEDIUM_PLUS_LABEL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.MEDIUM_PLUS_LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NETWORK"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NETWORK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NETWORK_SERVICE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NETWORK_SERVICE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NEW_ENTERPRISE_READONLY_CONTROLLERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NEW_ENTERPRISE_READONLY_CONTROLLERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NON_CACHEABLE_PRINCIPALS_GROUP"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NON_CACHEABLE_PRINCIPALS_GROUP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NTLM_AUTHENTICATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NTLM_AUTHENTICATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NT_AUTHORITY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NT_AUTHORITY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.NULL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.NULL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.OTHER_ORGANIZATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.OTHER_ORGANIZATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.PROXY"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.PROXY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.REMOTE_LOGON_ID"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.REMOTE_LOGON_ID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.RESTRICTED_CODE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.RESTRICTED_CODE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.SELF"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.SELF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.SERVICE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.SERVICE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.SYSTEM_LABEL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.SYSTEM_LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.S_CHANNEL_AUTHENTICATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.S_CHANNEL_AUTHENTICATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.TERMINAL_SERVER"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.TERMINAL_SERVER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.THIS_ORGANIZATION"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.THIS_ORGANIZATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.THIS_ORGANIZATION_CERTIFICATE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.THIS_ORGANIZATION_CERTIFICATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.UNTRUSTED_LABEL"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.UNTRUSTED_LABEL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.USER_MODE_DRIVERS"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.USER_MODE_DRIVERS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.WORLD"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.WORLD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#powsid.WellKnownSIDType.WRITE_RESTRICTED_CODE"><code class="docutils literal notranslate"><span class="pre">WellKnownSIDType.WRITE_RESTRICTED_CODE</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">powsid</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">powsid package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apiref/powsid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="powsid-package">
+<h1>powsid package<a class="headerlink" href="#powsid-package" title="Link to this heading"></a></h1>
+<section id="module-powsid">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-powsid" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="powsid.SID">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">powsid.</span></span><span class="sig-name descname"><span class="pre">SID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powsid.SID" title="Link to this definition"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Windowsのセキュリティ識別子。</p>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sid1</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">create_wellknownsid</span><span class="p">(</span><span class="n">WellKnownSIDType</span><span class="o">.</span><span class="n">NT_AUTHORITY</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sid2</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">lookup_user</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sid3</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">lookup_computer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sid4</span> <span class="o">=</span> <span class="n">SID</span><span class="o">.</span><span class="n">lookup_accountsid</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="powsid.SID.AccountInfo">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AccountInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refdomainname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#powsid.SIDNameUse" title="powsid.SIDNameUse"><span class="pre">SIDNameUse</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powsid.SID.AccountInfo" title="Link to this definition"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
+<p>アカウント情報。</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SID.AccountInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#powsid.SID.AccountInfo.name" title="Link to this definition"></a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SID.AccountInfo.refdomainname">
+<span class="sig-name descname"><span class="pre">refdomainname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#powsid.SID.AccountInfo.refdomainname" title="Link to this definition"></a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SID.AccountInfo.use">
+<span class="sig-name descname"><span class="pre">use</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#powsid.SIDNameUse" title="powsid.SIDNameUse"><span class="pre">SIDNameUse</span></a></em><a class="headerlink" href="#powsid.SID.AccountInfo.use" title="Link to this definition"></a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SID.CURRENT_REVISION">
+<span class="sig-name descname"><span class="pre">CURRENT_REVISION</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#powsid.SID.CURRENT_REVISION" title="Link to this definition"></a></dt>
+<dd><p>現在のリビジョン。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SID.MAX_SUB_AUTHORITIES">
+<span class="sig-name descname"><span class="pre">MAX_SUB_AUTHORITIES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#powsid.SID.MAX_SUB_AUTHORITIES" title="Link to this definition"></a></dt>
+<dd><p>サブ認証値の最大個数。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SID.RECOMMENDED_SUB_AUTHORITIES">
+<span class="sig-name descname"><span class="pre">RECOMMENDED_SUB_AUTHORITIES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#powsid.SID.RECOMMENDED_SUB_AUTHORITIES" title="Link to this definition"></a></dt>
+<dd><p>サブ認証値の推奨個数。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="powsid.SID.bytes">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#powsid.SID.bytes" title="Link to this definition"></a></dt>
+<dd><p>SIDのバイト表現を取得します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.create_wellknownsid">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_wellknownsid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wellknownsidtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#powsid.WellKnownSIDType" title="powsid.WellKnownSIDType"><span class="pre">WellKnownSIDType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_sid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.create_wellknownsid" title="Link to this definition"></a></dt>
+<dd><p>既知のSIDを作成します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wellknownsidtype</strong> (<em>int</em><em> | </em><a class="reference internal" href="#powsid.WellKnownSIDType" title="powsid.WellKnownSIDType"><em>WellKnownSIDType</em></a>) -- 既知SID種類。</p></li>
+<li><p><strong>domain_sid</strong> (<a class="reference internal" href="#powsid.SID" title="powsid.SID"><em>SID</em></a><em> | </em><em>None</em><em>, </em><em>optional</em>) -- ドメインを識別するSID。<a href="#id1"><span class="problematic" id="id2">`</span></a>None`の場合はローカルコンピューターです。</p></li>
+</ul>
+</dd>
+<dt class="field-even">例外<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>WinError</strong> -- SIDの取得に失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="powsid.SID.domainsid">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">domainsid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></em><a class="headerlink" href="#powsid.SID.domainsid" title="Link to this definition"></a></dt>
+<dd><p>ドメインSIDを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 取得失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.from_auths">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_auths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idauth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subauths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.from_auths" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.from_strsid">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_strsid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.from_strsid" title="Link to this definition"></a></dt>
+<dd><p>文字列SIDからSIDを作成します。
+:raises WinError: 変換の失敗。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.get_required_len">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_required_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subauth_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#powsid.SID.get_required_len" title="Link to this definition"></a></dt>
+<dd><p>サブ認証値数からSIDに必要なバイト数を返します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.get_subsidauth_at">
+<span class="sig-name descname"><span class="pre">get_subsidauth_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#powsid.SID.get_subsidauth_at" title="Link to this definition"></a></dt>
+<dd><p>指定位置のサブ認証値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 取得失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.has_equal_domain">
+<span class="sig-name descname"><span class="pre">has_equal_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">NotImplementedType</span></span></span><a class="headerlink" href="#powsid.SID.has_equal_domain" title="Link to this definition"></a></dt>
+<dd><p>SIDのドメインが一致する場合は真を返します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.has_equal_prefix">
+<span class="sig-name descname"><span class="pre">has_equal_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#powsid.SID.has_equal_prefix" title="Link to this definition"></a></dt>
+<dd><p>SIDの最後のサブ認証値以外が一致する場合は真を返します。</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="powsid.SID.identifyauth">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identifyauth</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#powsid.SID.identifyauth" title="Link to this definition"></a></dt>
+<dd><p>主要認証値を取得・設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 取得・設定失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="powsid.SID.is_valid">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_valid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#powsid.SID.is_valid" title="Link to this definition"></a></dt>
+<dd><p>有効なSIDならば真を返します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.is_wellknownsid">
+<span class="sig-name descname"><span class="pre">is_wellknownsid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#powsid.WellKnownSIDType" title="powsid.WellKnownSIDType"><span class="pre">WellKnownSIDType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#powsid.SID.is_wellknownsid" title="Link to this definition"></a></dt>
+<dd><p>SIDが指定した種類の既知SIDの場合は真を返します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.lookup_accountname">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lookup_accountname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">accountname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sysname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_accountname" title="Link to this definition"></a></dt>
+<dd><p>アカウント名からSIDを検索します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>accountname</strong> (<em>str</em><em> | </em><em>None</em><em>, </em><em>optional</em>) -- アカウント名。ドメイン名も指定する場合は「domain_nameuser_name」形式を用います。</p></li>
+<li><p><strong>sysname</strong> (<em>str</em><em> | </em><em>None</em><em>, </em><em>optional</em>) -- リモートコンピューターの名前。<a href="#id3"><span class="problematic" id="id4">`</span></a>None`の場合はローカルコンピューターです。</p></li>
+</ul>
+</dd>
+<dt class="field-even">例外<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>WinError</strong> -- 検索の失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.lookup_accountsid">
+<span class="sig-name descname"><span class="pre">lookup_accountsid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sysname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID.AccountInfo" title="powsid.SID.AccountInfo"><span class="pre">AccountInfo</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_accountsid" title="Link to this definition"></a></dt>
+<dd><p>アカウント情報を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 取得失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.lookup_currentuser">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lookup_currentuser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_currentuser" title="Link to this definition"></a></dt>
+<dd><p>スレッドの現在のユーザーのSIDを検索します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 検索の失敗</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.lookup_localcomputer">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lookup_localcomputer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#powsid.SID" title="powsid.SID"><span class="pre">SID</span></a></span></span><a class="headerlink" href="#powsid.SID.lookup_localcomputer" title="Link to this definition"></a></dt>
+<dd><p>ローカルコンピューターのSIDを検索します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 検索の失敗</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="powsid.SID.set_subsidauth_at">
+<span class="sig-name descname"><span class="pre">set_subsidauth_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#powsid.SID.set_subsidauth_at" title="Link to this definition"></a></dt>
+<dd><p>指定位置のサブ認証値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- 設定失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="powsid.SID.subauthcount">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subauthcount</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#powsid.SID.subauthcount" title="Link to this definition"></a></dt>
+<dd><p>サブ認証値数を取得・設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>WinError</strong> -- サブ認証値数の取得失敗。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="powsid.SID.subauths">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subauths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#powsid.SID.subauths" title="Link to this definition"></a></dt>
+<dd><p>サブ認証値を取得・設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">例外<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>WinError</strong> -- 取得失敗。</p></li>
+<li><p><strong>ValueError</strong> -- 設定時のサブ認証値の個数不一致。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="powsid.SIDNameUse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">powsid.</span></span><span class="sig-name descname"><span class="pre">SIDNameUse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powsid.SIDNameUse" title="Link to this definition"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>SID_NAME_USE列挙型</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.ALIAS">
+<span class="sig-name descname"><span class="pre">ALIAS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#powsid.SIDNameUse.ALIAS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.COMPUTER">
+<span class="sig-name descname"><span class="pre">COMPUTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#powsid.SIDNameUse.COMPUTER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.DELETED_ACCOUNT">
+<span class="sig-name descname"><span class="pre">DELETED_ACCOUNT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#powsid.SIDNameUse.DELETED_ACCOUNT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.DOMAIN">
+<span class="sig-name descname"><span class="pre">DOMAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#powsid.SIDNameUse.DOMAIN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.GROUP">
+<span class="sig-name descname"><span class="pre">GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#powsid.SIDNameUse.GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.INVALID">
+<span class="sig-name descname"><span class="pre">INVALID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#powsid.SIDNameUse.INVALID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.LABEL">
+<span class="sig-name descname"><span class="pre">LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#powsid.SIDNameUse.LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.LOGON_SESSION">
+<span class="sig-name descname"><span class="pre">LOGON_SESSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#powsid.SIDNameUse.LOGON_SESSION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#powsid.SIDNameUse.UNKNOWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.USER">
+<span class="sig-name descname"><span class="pre">USER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#powsid.SIDNameUse.USER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.SIDNameUse.WELL_KNOWN_GROUP">
+<span class="sig-name descname"><span class="pre">WELL_KNOWN_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#powsid.SIDNameUse.WELL_KNOWN_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">powsid.</span></span><span class="sig-name descname"><span class="pre">WellKnownSIDType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powsid.WellKnownSIDType" title="Link to this definition"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>既知SID種類。</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_ADMINISTRATOR">
+<span class="sig-name descname"><span class="pre">ACCOUNT_ADMINISTRATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">38</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_ADMINISTRATOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_CERT_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_CERT_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">46</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_CERT_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_CLONEABLE_CONTROLLERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_CLONEABLE_CONTROLLERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_CLONEABLE_CONTROLLERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_COMPUTERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_COMPUTERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">44</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_COMPUTERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_CONTROLLERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_CONTROLLERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">45</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_CONTROLLERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_DEFAULT_SYSTEM_MANAGED">
+<span class="sig-name descname"><span class="pre">ACCOUNT_DEFAULT_SYSTEM_MANAGED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">110</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_DEFAULT_SYSTEM_MANAGED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_DOMAIN_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_DOMAIN_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">41</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_DOMAIN_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_DOMAIN_GUESTS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_DOMAIN_GUESTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">43</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_DOMAIN_GUESTS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_DOMAIN_USERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_DOMAIN_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">42</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_DOMAIN_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_ENTERPRISE_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_ENTERPRISE_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">48</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_ENTERPRISE_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_ENTERPRISE_KEY_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_ENTERPRISE_KEY_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">114</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_ENTERPRISE_KEY_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_GUEST">
+<span class="sig-name descname"><span class="pre">ACCOUNT_GUEST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">39</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_GUEST" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_KEY_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_KEY_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">113</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_KEY_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_KRBTGT">
+<span class="sig-name descname"><span class="pre">ACCOUNT_KRBTGT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">40</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_KRBTGT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_POLICY_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_POLICY_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">49</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_POLICY_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_PROTECTED_USERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_PROTECTED_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">107</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_PROTECTED_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_RAS_AND_IAS_SERVERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_RAS_AND_IAS_SERVERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_RAS_AND_IAS_SERVERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_READONLY_CONTROLLERS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_READONLY_CONTROLLERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">75</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_READONLY_CONTROLLERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ACCOUNT_SCHEMA_ADMINS">
+<span class="sig-name descname"><span class="pre">ACCOUNT_SCHEMA_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">47</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ACCOUNT_SCHEMA_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ANONYMOUS">
+<span class="sig-name descname"><span class="pre">ANONYMOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ANONYMOUS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.APPLICATION_PACKAGE_AUTHORITY">
+<span class="sig-name descname"><span class="pre">APPLICATION_PACKAGE_AUTHORITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">83</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.APPLICATION_PACKAGE_AUTHORITY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATED_USER">
+<span class="sig-name descname"><span class="pre">AUTHENTICATED_USER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATED_USER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATION_AUTHORITY_ASSERTED">
+<span class="sig-name descname"><span class="pre">AUTHENTICATION_AUTHORITY_ASSERTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">103</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATION_AUTHORITY_ASSERTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATION_FRESH_KEY_AUTH">
+<span class="sig-name descname"><span class="pre">AUTHENTICATION_FRESH_KEY_AUTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">118</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATION_FRESH_KEY_AUTH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_ATTESTATION">
+<span class="sig-name descname"><span class="pre">AUTHENTICATION_KEY_PROPERTY_ATTESTATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">117</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_ATTESTATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_MFA">
+<span class="sig-name descname"><span class="pre">AUTHENTICATION_KEY_PROPERTY_MFA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">116</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATION_KEY_PROPERTY_MFA" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATION_KEY_TRUST">
+<span class="sig-name descname"><span class="pre">AUTHENTICATION_KEY_TRUST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">115</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATION_KEY_TRUST" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.AUTHENTICATION_SERVICE_ASSERTED">
+<span class="sig-name descname"><span class="pre">AUTHENTICATION_SERVICE_ASSERTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">104</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.AUTHENTICATION_SERVICE_ASSERTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BATCH">
+<span class="sig-name descname"><span class="pre">BATCH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BATCH" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_ACCESS_CONTROL_ASSISTANCE_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_ACCESS_CONTROL_ASSISTANCE_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">101</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_ACCESS_CONTROL_ASSISTANCE_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_ACCOUNT_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_ACCOUNT_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_ACCOUNT_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_ADMINISTRATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_ADMINISTRATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">26</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_ADMINISTRATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_ANY_PACKAGE">
+<span class="sig-name descname"><span class="pre">BUILTIN_ANY_PACKAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">84</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_ANY_PACKAGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_AUTHORIZATION_ACCESS">
+<span class="sig-name descname"><span class="pre">BUILTIN_AUTHORIZATION_ACCESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">59</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_AUTHORIZATION_ACCESS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_BACKUP_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_BACKUP_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">33</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_BACKUP_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_CERT_SVC_D_COM_ACCESS_GROUP">
+<span class="sig-name descname"><span class="pre">BUILTIN_CERT_SVC_D_COM_ACCESS_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">78</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_CERT_SVC_D_COM_ACCESS_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_CRYPTO_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_CRYPTO_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">64</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_CRYPTO_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_DCOM_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_DCOM_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">61</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_DCOM_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_DEFAULT_SYSTEM_MANAGED_GROUP">
+<span class="sig-name descname"><span class="pre">BUILTIN_DEFAULT_SYSTEM_MANAGED_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">111</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_DEFAULT_SYSTEM_MANAGED_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_DEVICE_OWNERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_DEVICE_OWNERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">119</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_DEVICE_OWNERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_DOMAIN">
+<span class="sig-name descname"><span class="pre">BUILTIN_DOMAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_DOMAIN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_EVENT_LOG_READERS_GROUP">
+<span class="sig-name descname"><span class="pre">BUILTIN_EVENT_LOG_READERS_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">76</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_EVENT_LOG_READERS_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_GUESTS">
+<span class="sig-name descname"><span class="pre">BUILTIN_GUESTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">28</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_GUESTS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_HYPER_V_ADMINS">
+<span class="sig-name descname"><span class="pre">BUILTIN_HYPER_V_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">99</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_HYPER_V_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_INCOMING_FOREST_TRUST_BUILDERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_INCOMING_FOREST_TRUST_BUILDERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">56</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_INCOMING_FOREST_TRUST_BUILDERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_I_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_I_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">62</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_I_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_NETWORK_CONFIGURATION_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_NETWORK_CONFIGURATION_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">37</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_NETWORK_CONFIGURATION_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_OPEN_SSH_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_OPEN_SSH_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">121</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_OPEN_SSH_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_PERF_LOGGING_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_PERF_LOGGING_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">58</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_PERF_LOGGING_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_PERF_MONITORING_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_PERF_MONITORING_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_PERF_MONITORING_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_POWER_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_POWER_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">29</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_POWER_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_PRE_WINDOWS2000_COMPATIBLE_ACCESS">
+<span class="sig-name descname"><span class="pre">BUILTIN_PRE_WINDOWS2000_COMPATIBLE_ACCESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">35</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_PRE_WINDOWS2000_COMPATIBLE_ACCESS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_PRINT_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_PRINT_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_PRINT_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_RDS_ENDPOINT_SERVERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_RDS_ENDPOINT_SERVERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">96</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_RDS_ENDPOINT_SERVERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_RDS_MANAGEMENT_SERVERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_RDS_MANAGEMENT_SERVERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">97</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_RDS_MANAGEMENT_SERVERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_RDS_REMOTE_ACCESS_SERVERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_RDS_REMOTE_ACCESS_SERVERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">95</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_RDS_REMOTE_ACCESS_SERVERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_REMOTE_DESKTOP_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_REMOTE_DESKTOP_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">36</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_REMOTE_DESKTOP_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_REMOTE_MANAGEMENT_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_REMOTE_MANAGEMENT_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">102</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_REMOTE_MANAGEMENT_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_REPLICATOR">
+<span class="sig-name descname"><span class="pre">BUILTIN_REPLICATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">34</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_REPLICATOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_STORAGE_REPLICA_ADMINS">
+<span class="sig-name descname"><span class="pre">BUILTIN_STORAGE_REPLICA_ADMINS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">112</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_STORAGE_REPLICA_ADMINS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_SYSTEM_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_SYSTEM_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_SYSTEM_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_TERMINAL_SERVER_LICENSE_SERVERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_TERMINAL_SERVER_LICENSE_SERVERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">60</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_TERMINAL_SERVER_LICENSE_SERVERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_USERS">
+<span class="sig-name descname"><span class="pre">BUILTIN_USERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">27</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_USERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.BUILTIN_USER_MODE_HARDWARE_OPERATORS">
+<span class="sig-name descname"><span class="pre">BUILTIN_USER_MODE_HARDWARE_OPERATORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">120</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.BUILTIN_USER_MODE_HARDWARE_OPERATORS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CACHEABLE_PRINCIPALS_GROUP">
+<span class="sig-name descname"><span class="pre">CACHEABLE_PRINCIPALS_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">72</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CACHEABLE_PRINCIPALS_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_APPOINTMENTS">
+<span class="sig-name descname"><span class="pre">CAPABILITY_APPOINTMENTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">108</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_APPOINTMENTS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_CONTACTS">
+<span class="sig-name descname"><span class="pre">CAPABILITY_CONTACTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">109</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_CONTACTS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_DOCUMENTS_LIBRARY">
+<span class="sig-name descname"><span class="pre">CAPABILITY_DOCUMENTS_LIBRARY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">91</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_DOCUMENTS_LIBRARY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_ENTERPRISE_AUTHENTICATION">
+<span class="sig-name descname"><span class="pre">CAPABILITY_ENTERPRISE_AUTHENTICATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">93</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_ENTERPRISE_AUTHENTICATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_INTERNET_CLIENT">
+<span class="sig-name descname"><span class="pre">CAPABILITY_INTERNET_CLIENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">85</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_INTERNET_CLIENT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_INTERNET_CLIENT_SERVER">
+<span class="sig-name descname"><span class="pre">CAPABILITY_INTERNET_CLIENT_SERVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">86</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_INTERNET_CLIENT_SERVER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_MUSIC_LIBRARY">
+<span class="sig-name descname"><span class="pre">CAPABILITY_MUSIC_LIBRARY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">90</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_MUSIC_LIBRARY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_PICTURES_LIBRARY">
+<span class="sig-name descname"><span class="pre">CAPABILITY_PICTURES_LIBRARY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">88</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_PICTURES_LIBRARY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_PRIVATE_NETWORK_CLIENT_SERVER">
+<span class="sig-name descname"><span class="pre">CAPABILITY_PRIVATE_NETWORK_CLIENT_SERVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">87</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_PRIVATE_NETWORK_CLIENT_SERVER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_REMOVABLE_STORAGE">
+<span class="sig-name descname"><span class="pre">CAPABILITY_REMOVABLE_STORAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">94</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_REMOVABLE_STORAGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_SHARED_USER_CERTIFICATES">
+<span class="sig-name descname"><span class="pre">CAPABILITY_SHARED_USER_CERTIFICATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">92</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_SHARED_USER_CERTIFICATES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CAPABILITY_VIDEOS_LIBRARY">
+<span class="sig-name descname"><span class="pre">CAPABILITY_VIDEOS_LIBRARY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">89</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CAPABILITY_VIDEOS_LIBRARY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CONSOLE_LOGON">
+<span class="sig-name descname"><span class="pre">CONSOLE_LOGON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">81</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CONSOLE_LOGON" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CREATOR_GROUP">
+<span class="sig-name descname"><span class="pre">CREATOR_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CREATOR_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CREATOR_GROUP_SERVER">
+<span class="sig-name descname"><span class="pre">CREATOR_GROUP_SERVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CREATOR_GROUP_SERVER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CREATOR_OWNER">
+<span class="sig-name descname"><span class="pre">CREATOR_OWNER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CREATOR_OWNER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CREATOR_OWNER_RIGHTS">
+<span class="sig-name descname"><span class="pre">CREATOR_OWNER_RIGHTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">71</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CREATOR_OWNER_RIGHTS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.CREATOR_OWNER_SERVER">
+<span class="sig-name descname"><span class="pre">CREATOR_OWNER_SERVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.CREATOR_OWNER_SERVER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.DIALUP">
+<span class="sig-name descname"><span class="pre">DIALUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.DIALUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.DIGEST_AUTHENTICATION">
+<span class="sig-name descname"><span class="pre">DIGEST_AUTHENTICATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">52</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.DIGEST_AUTHENTICATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ENTERPRISE_CONTROLLERS">
+<span class="sig-name descname"><span class="pre">ENTERPRISE_CONTROLLERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ENTERPRISE_CONTROLLERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.ENTERPRISE_READONLY_CONTROLLERS">
+<span class="sig-name descname"><span class="pre">ENTERPRISE_READONLY_CONTROLLERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">74</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.ENTERPRISE_READONLY_CONTROLLERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.HIGH_LABEL">
+<span class="sig-name descname"><span class="pre">HIGH_LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">68</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.HIGH_LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.INTERACTIVE">
+<span class="sig-name descname"><span class="pre">INTERACTIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.INTERACTIVE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.I_USER">
+<span class="sig-name descname"><span class="pre">I_USER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">63</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.I_USER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOCAL">
+<span class="sig-name descname"><span class="pre">LOCAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOCAL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOCAL_ACCOUNT">
+<span class="sig-name descname"><span class="pre">LOCAL_ACCOUNT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">105</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOCAL_ACCOUNT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOCAL_ACCOUNT_AND_ADMINISTRATOR">
+<span class="sig-name descname"><span class="pre">LOCAL_ACCOUNT_AND_ADMINISTRATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">106</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOCAL_ACCOUNT_AND_ADMINISTRATOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOCAL_LOGON">
+<span class="sig-name descname"><span class="pre">LOCAL_LOGON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">80</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOCAL_LOGON" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOCAL_SERVICE">
+<span class="sig-name descname"><span class="pre">LOCAL_SERVICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOCAL_SERVICE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOCAL_SYSTEM">
+<span class="sig-name descname"><span class="pre">LOCAL_SYSTEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">22</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOCAL_SYSTEM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOGON_IDS">
+<span class="sig-name descname"><span class="pre">LOGON_IDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOGON_IDS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.LOW_LABEL">
+<span class="sig-name descname"><span class="pre">LOW_LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">66</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.LOW_LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.MEDIUM_LABEL">
+<span class="sig-name descname"><span class="pre">MEDIUM_LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">67</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.MEDIUM_LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.MEDIUM_PLUS_LABEL">
+<span class="sig-name descname"><span class="pre">MEDIUM_PLUS_LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">79</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.MEDIUM_PLUS_LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NETWORK">
+<span class="sig-name descname"><span class="pre">NETWORK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NETWORK" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NETWORK_SERVICE">
+<span class="sig-name descname"><span class="pre">NETWORK_SERVICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NETWORK_SERVICE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NEW_ENTERPRISE_READONLY_CONTROLLERS">
+<span class="sig-name descname"><span class="pre">NEW_ENTERPRISE_READONLY_CONTROLLERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">77</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NEW_ENTERPRISE_READONLY_CONTROLLERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NON_CACHEABLE_PRINCIPALS_GROUP">
+<span class="sig-name descname"><span class="pre">NON_CACHEABLE_PRINCIPALS_GROUP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">73</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NON_CACHEABLE_PRINCIPALS_GROUP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NTLM_AUTHENTICATION">
+<span class="sig-name descname"><span class="pre">NTLM_AUTHENTICATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">51</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NTLM_AUTHENTICATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NT_AUTHORITY">
+<span class="sig-name descname"><span class="pre">NT_AUTHORITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NT_AUTHORITY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.NULL">
+<span class="sig-name descname"><span class="pre">NULL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.NULL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.OTHER_ORGANIZATION">
+<span class="sig-name descname"><span class="pre">OTHER_ORGANIZATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">55</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.OTHER_ORGANIZATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.PROXY">
+<span class="sig-name descname"><span class="pre">PROXY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.PROXY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.REMOTE_LOGON_ID">
+<span class="sig-name descname"><span class="pre">REMOTE_LOGON_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.REMOTE_LOGON_ID" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.RESTRICTED_CODE">
+<span class="sig-name descname"><span class="pre">RESTRICTED_CODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.RESTRICTED_CODE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.SELF">
+<span class="sig-name descname"><span class="pre">SELF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.SELF" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.SERVICE">
+<span class="sig-name descname"><span class="pre">SERVICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.SERVICE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.SYSTEM_LABEL">
+<span class="sig-name descname"><span class="pre">SYSTEM_LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">69</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.SYSTEM_LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.S_CHANNEL_AUTHENTICATION">
+<span class="sig-name descname"><span class="pre">S_CHANNEL_AUTHENTICATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">53</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.S_CHANNEL_AUTHENTICATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.TERMINAL_SERVER">
+<span class="sig-name descname"><span class="pre">TERMINAL_SERVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.TERMINAL_SERVER" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.THIS_ORGANIZATION">
+<span class="sig-name descname"><span class="pre">THIS_ORGANIZATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">54</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.THIS_ORGANIZATION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.THIS_ORGANIZATION_CERTIFICATE">
+<span class="sig-name descname"><span class="pre">THIS_ORGANIZATION_CERTIFICATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">82</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.THIS_ORGANIZATION_CERTIFICATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.UNTRUSTED_LABEL">
+<span class="sig-name descname"><span class="pre">UNTRUSTED_LABEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">65</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.UNTRUSTED_LABEL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.USER_MODE_DRIVERS">
+<span class="sig-name descname"><span class="pre">USER_MODE_DRIVERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">98</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.USER_MODE_DRIVERS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.WORLD">
+<span class="sig-name descname"><span class="pre">WORLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.WORLD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="powsid.WellKnownSIDType.WRITE_RESTRICTED_CODE">
+<span class="sig-name descname"><span class="pre">WRITE_RESTRICTED_CODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">70</span></em><a class="headerlink" href="#powsid.WellKnownSIDType.WRITE_RESTRICTED_CODE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="powsidパッケージ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, potisan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

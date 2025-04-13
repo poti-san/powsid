@@ -215,7 +215,7 @@ class SID:
         """既知のSIDを作成します。
         Args:
             wellknownsidtype (int | WellKnownSIDType): 既知SID種類。
-            domain_sid (SID | None, optional): ドメインを識別するSID。`None`の場合はローカルコンピューターです。
+            domain_sid (SID | None, optional): ドメインを識別するSID。Noneの場合はローカルコンピューターです。
         Raises:
             WinError: SIDの取得に失敗。
         """
@@ -397,13 +397,13 @@ class SID:
         return _GetSidLengthRequired(subauth_count)
 
     def __eq__(self, other) -> bool | NotImplementedType:
-        """SIDが一致する場合は真、SIDが不一致する場合は偽、型が異なる場合は`NotImplemented`を返します。"""
+        """SIDが一致する場合は真、SIDが不一致する場合は偽、型が異なる場合はNotImplementedを返します。"""
         if isinstance(other, SID):
             return _EqualSid(self.__data, other.__data) != 0
         return NotImplemented
 
     def __ne__(self, other) -> bool | NotImplementedType:
-        """SIDが不一致する場合は真、SIDが一致する場合は偽、型が異なる場合は`NotImplemented`を返します。"""
+        """SIDが不一致する場合は真、SIDが一致する場合は偽、型が異なる場合はNotImplementedを返します。"""
         if isinstance(other, SID):
             return _EqualSid(self.__data, other.__data) == 0
         return NotImplemented
@@ -417,7 +417,7 @@ class SID:
         """アカウント名からSIDを検索します。
         Args:
             accountname (str | None, optional): アカウント名。ドメイン名も指定する場合は「domain_name\\user_name」形式を用います。
-            sysname (str | None, optional): リモートコンピューターの名前。`None`の場合はローカルコンピューターです。
+            sysname (str | None, optional): リモートコンピューターの名前。Noneの場合はローカルコンピューターです。
         Raises:
             WinError: 検索の失敗。
         """
