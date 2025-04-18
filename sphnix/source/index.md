@@ -13,7 +13,6 @@ PythonからWindowsのSID（セキュリティID）を使いやすくするパ�
 
 **既知SIDの名前・ドメイン名・用途を取得する。**
 ```python
-
 from powsid import SID, WellKnownSIDType
 
 for sidtype in WellKnownSIDType:
@@ -41,4 +40,3 @@ print((sid3, *sid3.lookup_accountsid()))
 ## インストール
 
 ローカルパッケージとしての利用を前提としています。使用時はダウンロードして`pip install e.ps1`を実行してください。
-
